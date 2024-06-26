@@ -86,7 +86,7 @@
 }
 
 .msg{
-  background-color: #cefdd7;
+  background-color: #fdf3ce;
   margin: 10px;
   padding: 5px;
   padding-left: 10px;
@@ -98,19 +98,19 @@
   font-size: small;
  }
 
- .msg::after{
+ /* .msg::after{
   content: "";
   border-width: 10px;
   border-style: solid;
   border-color: transparent;
-  border-top-color: #cefdd7;
+  border-top-color: #57ab66;
   display: block;
   position: absolute;
   margin-left: -5px;
-}
+} */
 
  .msg_center{
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
   margin: 10px;
   padding: 5px;
   width: fit-content;
@@ -275,10 +275,11 @@
 } */
 
 .nickname_style{
-  font-size: 9px;
+  font-size: 12px;
   position: absolute;
   top: -5px;
   left: 5px;
+  color: #000000;
 }
 
 
@@ -296,4 +297,5 @@
 ::-webkit-scrollbar-thumb {
   background: rgb(252, 255, 207);
 }
+
 

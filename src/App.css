@@ -1,5 +1,26 @@
+/* .App {
+  height:100vh;
+  background-image: url("../public/suu.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-color: #fbebeb;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 28rem;
+  position: relative;
+  border: 2px solid #ccc; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #282c34; */
 }
 
 .App-logo {
@@ -36,3 +57,243 @@
     transform: rotate(360deg);
   }
 }
+
+.chatting{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #282c34;
+}
+
+.chatting_wrapper{
+  width: 25vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.chatting_box{
+  background-color: #e2e5fe;
+  height: 70vh;
+  text-align: left;
+  overflow-y: auto;
+  border-radius:10px 10px 0 0;
+}
+
+.msg{
+  background-color: #cefdd7;
+  margin: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  border-radius: 3px;
+  word-break: break-all;
+  max-width: 50%;
+  font-size: small;
+ }
+
+ .msg::after{
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #cefdd7;
+  display: block;
+  position: absolute;
+  margin-left: -5px;
+}
+
+ .msg_center{
+  background-color: lightcyan;
+  margin: 10px;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 10px;
+  word-break: break-all;
+  max-width: 50%;
+  font-size: x-small;
+ }
+
+.msg_box{
+  position: relative;
+  display: flex;
+  margin: 5px;
+}
+
+.login{
+  background-color: #282c34;
+  /* position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px; */
+  width: 30%;
+  height: 90%;
+  object-fit: cover;
+  /* z-index: -1; */
+  border-radius: 10px;
+  background: url('/public/바다.gif') no-repeat center center;
+  background-size: cover;
+}
+
+.login video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  /* z-index: -1; */
+  border-radius: 10px;
+}
+
+.login_wrapper{
+  background-color: #000000;
+  opacity: 50%;
+  font-size: small;
+  padding: 0 30px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.name {
+  color: #fff;
+  margin-top: 10px;
+}
+
+
+.login_wrapper button{
+  /* margin: 5px;
+  cursor: pointer;
+  border-radius: 5px; */
+  width: 65px;
+  height: 50px;
+  background: url('/public/몰티즈3.png') no-repeat center center; /* 버튼 이미지 설정 */
+  background-size: cover; /* 버튼 이미지 크기 설정 */
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+/* button.enter_btn {
+  width: 65px;
+  height: 50px;
+  background: url('/public/몰티즈1.png') no-repeat center center; 
+  background-size: cover; 
+  border: none;
+  cursor: pointer;
+} */
+
+.login_wrapper button:hover {
+  width: 65px;
+  height: 50px;
+  background: url('/public/몰티즈2.png') no-repeat center center; /* 버튼 이미지 설정 */
+  background-size: cover; /* 버튼 이미지 크기 설정 */
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+.input_box{
+  position: relative;
+  background-color: rgb(244, 252, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: baseline;
+  border-radius: 0 0 10px 10px;
+}
+
+.input_box input{
+  flex: 1;
+  width: 100%;
+  border: 0;
+  height: 40px;
+  border-radius: 5px;
+  padding-right: 10px;
+  margin-right: 75px;
+  background-color: #ebebeb;
+}
+
+.input_box .box {
+  background-color: #000000;
+  width: 2px;
+}
+
+.input_box button{
+  /* margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  border: #000000; */
+
+  /* position: absolute;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    border: #000000;
+    bottom: 13px;
+    right: 6px; */
+
+    position: absolute;
+  right: 10px; /* input_box의 오른쪽 여백 */
+  top: 50%;
+  transform: translateY(-50%);
+    height: 42px;
+  padding: 0 20px;
+  background-color: #c9e2fe;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+.login_wrapper input{
+  margin: 5px;
+  border: 0;
+  display: flex;
+}
+
+/* button:hover{
+  background-color: rgb(251, 209, 215);
+} */
+
+.nickname_style{
+  font-size: 9px;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+}
+
+
+/* 스크롤 폭 */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* 스크롤 트렉 */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(252, 255, 207);
+}
+
+/* 스크롤 핸들 */
+::-webkit-scrollbar-thumb {
+  background: rgb(252, 255, 207);
+}
+

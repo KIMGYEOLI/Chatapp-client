@@ -1,0 +1,41 @@
+/* Sidebar.css */
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 58px;
+  left: 300px;
+  border-radius: 10px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.user {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+}
+
+.user:last-child {
+  border-bottom: none;
+}
+
+.currentAccessPerson{
+  margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.current-user {
+  /* background-color: #b3e5fc;  */
+  color: #7c9dff;
+}

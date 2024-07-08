@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'KOTRAHOPE';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* .App {
   height:100vh;
   background-image: url("../public/suu.jpg"); 
@@ -13,6 +20,10 @@
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 } */
+
+body {
+  font-family: 'KOTRAHOPE';
+}
 
 .App {
   text-align: center;
@@ -58,6 +69,28 @@
   }
 }
 
+
+.sidebar {
+  width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 47px;
+    left: 200px;
+    border-radius: 10px;
+}
+.chat-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar-container {
+  width: 20%;
+  height: 100%;
+}
+
 .chatting{
   position: relative;
   width: 100%;
@@ -66,7 +99,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #282c34;
+  /* background-color: #282c34; */
 }
 
 .chatting_wrapper{
@@ -75,14 +108,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  z-index: 2;
 }
 
 .chatting_box{
-  background-color: #e2e5fe;
-  height: 70vh;
+  /* background-color: #e2e5fe; */
+  background-color: #f9f6f6;
+  height: 75vh;
   text-align: left;
   overflow-y: auto;
-  border-radius:10px 10px 0 0;
 }
 
 .msg{
@@ -95,8 +129,10 @@
   border-radius: 3px;
   word-break: break-all;
   max-width: 50%;
-  font-size: small;
+  font-size: medium;
  }
+
+
 
  /* .msg::after{
   content: "";
@@ -112,18 +148,52 @@
  .msg_center{
   /* background-color: lightcyan; */
   margin: 10px;
-  padding: 5px;
   width: fit-content;
   border-radius: 10px;
   word-break: break-all;
   max-width: 50%;
-  font-size: x-small;
+  font-size: 18px;
  }
+
+
+.msg_date {
+  background-color: #e0e0e0; 
+}
 
 .msg_box{
   position: relative;
   display: flex;
   margin: 5px;
+}
+
+.msg_me {
+  background-color: #e5e3e3; 
+  margin: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  border-radius: 7px;
+  word-break: break-all;
+  max-width: 50%;
+  font-size: 18px;
+  word-break: break-word; 
+  white-space: pre-wrap;
+}
+
+.msg_other {
+  background-color: #7c9dff; 
+  margin: 10px 0;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  border-radius: 7px;
+  word-break: break-all;
+  max-width: 50%;
+  font-size: 18px;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .login{
@@ -136,7 +206,7 @@
   align-items: center;
   overflow: hidden;
   border-radius: 10px; */
-  width: 30%;
+  width: 25%;
   height: 90%;
   object-fit: cover;
   /* z-index: -1; */
@@ -161,7 +231,7 @@
   background-color: #000000;
   opacity: 50%;
   font-size: small;
-  padding: 0 30px;
+  padding: 13px 50px;
   text-align: center;
   border-radius: 10px;
   position: absolute;
@@ -173,6 +243,7 @@
 .name {
   color: #fff;
   margin-top: 10px;
+  font-size: 15px;
 }
 
 
@@ -227,34 +298,22 @@
   padding-right: 10px;
   margin-right: 75px;
   background-color: #ebebeb;
+  font-family: 'KOTRAHOPE';
+  font-size: 17px;
 }
+
 
 .input_box .box {
   background-color: #000000;
   width: 2px;
 }
 
-.input_box button{
-  /* margin-right: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 10px;
-  border: #000000; */
-
-  /* position: absolute;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 10px;
-    border: #000000;
-    bottom: 13px;
-    right: 6px; */
-
-    position: absolute;
-  right: 10px; /* input_box의 오른쪽 여백 */
+/* .input_box button{
+  position: absolute;
+  right: 10px; /* input_box의 오른쪽 여백 
   top: 50%;
   transform: translateY(-50%);
-    height: 42px;
+  height: 42px;
   padding: 0 20px;
   background-color: #c9e2fe;
   color: white;
@@ -262,7 +321,7 @@
   border-radius: 5px;
   cursor: pointer;
   margin-left: 150px;
-}
+} */
 
 .login_wrapper input{
   margin: 5px;
@@ -275,11 +334,13 @@
 } */
 
 .nickname_style{
-  font-size: 12px;
+  font-size: 10px;
   position: absolute;
-  top: -5px;
-  left: 5px;
+  top: -8px;
+  left: 55px;
   color: #000000;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 
@@ -290,12 +351,115 @@
 
 /* 스크롤 트렉 */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(252, 255, 207);
+  box-shadow: inset 0 0 5px #dce3fb;
 }
 
 /* 스크롤 핸들 */
 ::-webkit-scrollbar-thumb {
-  background: rgb(252, 255, 207);
+  background: #dce3fb;
 }
 
 
+.input_box button{
+  position: absolute;
+  right: 1px; 
+  top: 50%;
+  transform: translateY(-50%);
+  height: 42px;
+  padding: 0 40px;
+  /* background-color: #c9e2fe;
+  color: white; */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 65px;
+  height: 50px;
+  background: url('/public/리트리버.gif') no-repeat center center; /* 버튼 이미지 설정 */
+  background-size: cover; /* 버튼 이미지 크기 설정 */
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+.date_box {
+  display: flex;
+  justify-content: center;
+  margin: 10px 105px;
+  background-color: #e0e0e0; /* 날짜 메시지 배경색 */
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: -7px;
+  margin-right: 8px;
+}
+
+
+.toggle-sidebar-btn {
+  position: absolute; 
+  z-index: 1;
+  background-color: #7c9dff;
+  color: #4F4C66;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 12%;
+  left: 65.1%;
+  transform: translate(-50%, -56%);
+  font-family: 'KOTRAHOPE';
+  font-size: 20px;
+}
+
+
+.toggle-roomlist-btn {
+  position: absolute;
+    z-index: 1;
+    background-color: #7c9dff;
+    color: #4F4C66;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    top: 13%;
+    left: 65.1%;
+    transform: translate(-48%, 46%);
+    font-family: 'KOTRAHOPE';
+    font-size: 20px;
+}
+
+.room-list-container {
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #f9f6f6;
+  padding: 15px;
+  width: 25%;
+  height: 90%;
+}
+
+.current-room-name {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: #4f4c66;
+  background-color: #d5def8;
+  padding: 10px 160px;
+  border-radius: 5px 5px 0 0;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 4vw; 
+  overflow: hidden; 
+  white-space: nowrap;
+
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

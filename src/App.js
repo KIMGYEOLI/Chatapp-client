@@ -539,11 +539,17 @@ function App() {
       console.log('rooms >> ', rooms);
     };
 
+    const handleRoomDeleted = (data) => {
+      alert(data.msg);
+      setCurrentRoom("");
+    };
+
     server.on('msg', handleMsg);
     server.on('joinRoomSuccess', handleJoinRoomSuccess);
     server.on('joinRoomFail', handleJoinRoomFail);
     server.on('updateUserList', handleUpdateUserList);
     server.on('updateRoomList', handleUpdateRoomList);
+    server.on('roomDeleted', handleRoomDeleted);
 
     return () => {
       server.off('msg', handleMsg);
@@ -551,6 +557,7 @@ function App() {
       server.off('joinRoomFail', handleJoinRoomFail);
       server.off('updateUserList', handleUpdateUserList);
       server.off('updateRoomList', handleUpdateRoomList);
+      server.off('roomDeleted', handleRoomDeleted);
     };
   }, [nickName]);
 

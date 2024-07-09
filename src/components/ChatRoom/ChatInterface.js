@@ -54,6 +54,13 @@ const ChatInterface = ({ currentRoom, nickName }) => {
     }
   }, [msg, dateMsg]);
 
+  const linkify = (text) => {
+    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    return text.split(urlPattern).map((part, index) =>
+      urlPattern.test(part) ? <a key={index} href={part} target="_blank" rel="noopener noreferrer">{part}</a> : part
+    );
+  };
+
   return (
     <div className="chat-container">
       <div className="chatting">
@@ -66,7 +73,9 @@ const ChatInterface = ({ currentRoom, nickName }) => {
                   justifyContent: c.level === "sys" ? "center" : c.level === "me" ? "flex-end" : "flex-start"
                 }}>
                 {c.level !== "sys" && c.level !== 'me' && <img src="/몰티즈5.png" alt="" className="avatar" />}
-                <div className={c.level === "sys" ? 'msg_center' : c.level === "me" ? "msg_me" : "msg_other"}>{c.msg}</div>
+                <div className={c.level === "sys" ? 'msg_center' : c.level === "me" ? "msg_me" : "msg_other"}>
+                  {linkify(c.msg)}
+                </div>
                 {c.level !== "sys" && c.level !== 'me' && <div className='nickname_style'>{c.nickName}</div>}
               </div>
             ))}

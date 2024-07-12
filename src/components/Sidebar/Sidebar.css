@@ -6,13 +6,13 @@ body {
 }
 
 .sidebar {
-  width: 200px;
+  width: 250px;
   background-color: #f4f4f4;
   padding: 20px;
   position: absolute;
-  z-index: 1;
-  top: 58px;
-  left: 300px;
+  z-index: 2;
+  top: 47px;
+  left: 10%;
   border-radius: 10px;
 }
 

@@ -69,17 +69,17 @@ body {
   }
 }
 
-
 .sidebar {
-  width: 200px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    position: absolute;
-    z-index: 2;
-    top: 47px;
-    left: 200px;
-    border-radius: 10px;
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 47px;
+  left: 10%;
+  border-radius: 10px;
 }
+
 .chat-container {
   display: flex;
   height: 100%;
@@ -102,14 +102,49 @@ body {
   /* background-color: #282c34; */
 }
 
-.chatting_wrapper{
-  width: 25vw;
+.chatting_wrapper {
+  width: 400px; /* 원하는 너비 값으로 업데이트 */
+  max-width: 400px; /* 선택 사항: 너무 커지지 않도록 최대 너비 설정 */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
+
+/* 
+@media (max-width: 480px) {
+  .chatting_wrapper {
+    width: 90vw; 
+    max-width: none;
+  }
+} */
+
+@media (min-width: 1200px) {
+  .chatting_wrapper {
+    width: 400px;
+    font-size: 1.5em;
+  }
+}
+
+/* 중간 화면 (태블릿) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .chatting_wrapper {
+    width: 300px;
+    font-size: 1.3em;
+  }
+}
+
+/* 작은 화면 (모바일) */
+@media (max-width: 767px) {
+  .chatting_wrapper {
+    width: 250px;
+    font-size: 1.1em;
+  }
+}
+
+
+
 
 .chatting_box{
   /* background-color: #e2e5fe; */
@@ -382,13 +417,46 @@ body {
 }
 
 
+/* .date_box {
+  display: flex;
+  justify-content: center;
+  margin: 10px 105px;
+  background-color: #e0e0e0; 
+  border-radius: 5px;
+  font-size: 20px;
+} */
+
 .date_box {
   display: flex;
   justify-content: center;
   margin: 10px 105px;
-  background-color: #e0e0e0; /* 날짜 메시지 배경색 */
+  background-color: #e0e0e0;
   border-radius: 5px;
   font-size: 20px;
+}
+
+/* 큰 화면 (데스크탑) */
+@media (min-width: 1200px) {
+  .date_box {
+    font-size: 20px;
+    margin: 10px 105px;
+  }
+}
+
+/* 중간 화면 (태블릿) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .date_box {
+    font-size: 18px;
+    margin: 10px 50px;
+  }
+}
+
+/* 작은 화면 (모바일) */
+@media (max-width: 767px) {
+  .date_box {
+    font-size: 16px;
+    margin: 10px 20px;
+  }
 }
 
 .avatar {
@@ -400,37 +468,89 @@ body {
 }
 
 
-.toggle-sidebar-btn {
-  position: absolute; 
-  z-index: 1;
+/* .toggle-sidebar-btn {
   background-color: #7c9dff;
   color: #4F4C66;
   border: none;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
-  top: 12%;
-  left: 65.1%;
-  transform: translate(-50%, -56%);
   font-family: 'KOTRAHOPE';
   font-size: 20px;
+  position: absolute; 
+  z-index: 1;
+  right: 30%;
+  top: 10%; 
 }
 
 
 .toggle-roomlist-btn {
-  position: absolute;
-    z-index: 1;
-    background-color: #7c9dff;
-    color: #4F4C66;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    top: 13%;
-    left: 65.1%;
-    transform: translate(-48%, 46%);
-    font-family: 'KOTRAHOPE';
-    font-size: 20px;
+  background-color: #7c9dff;
+  color: #4F4C66;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'KOTRAHOPE';
+  font-size: 20px;
+  position: absolute; 
+  z-index: 1;
+  right: 30%; 
+  top: 20%; 
+} */
+
+.toggle-sidebar-btn, .toggle-roomlist-btn {
+  background-color: #7c9dff;
+  color: #4F4C66;
+  border: none;
+  padding: 8px 16px; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'KOTRAHOPE';
+  font-size: 20px;
+  position: absolute; 
+  z-index: 1;
+  width: 130px; 
+  text-align: center; 
+}
+
+/* 큰 화면 (데스크탑) */
+@media (min-width: 1200px) {
+  .toggle-sidebar-btn {
+    right: 30%;
+    top: 10%;
+  }
+
+  .toggle-roomlist-btn {
+    right: 30%;
+    top: 17%;
+  }
+}
+
+/* 중간 화면 (태블릿) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .toggle-sidebar-btn {
+    right: 10%;
+    top: 10%;
+  }
+
+  .toggle-roomlist-btn {
+    right: 10%;
+    top: 17%;
+  }
+}
+
+/* 작은 화면 (모바일) */
+@media (max-width: 767px) {
+  .toggle-sidebar-btn {
+    right: 5%;
+    top: 10%;
+  }
+
+  .toggle-roomlist-btn {
+    right: 5%;
+    top: 17%;
+  }
 }
 
 .room-list-container {
@@ -443,23 +563,40 @@ body {
 }
 
 .current-room-name {
+  width: 400px;
+  max-width: 400px;
   position: absolute;
   transform: translateX(-50%);
   font-size: 1.5em;
   color: #4f4c66;
   background-color: #d5def8;
-  padding: 10px 160px;
+  padding: 10px 0;
   border-radius: 5px 5px 0 0;
-  top: 5%;
+  top: 2%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  max-width: 4vw; 
-  overflow: hidden; 
-  white-space: nowrap;
+  text-align: center;
+}
 
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 큰 화면 (데스크탑) */
+@media (min-width: 1200px) {
+  .current-room-name {
+    width: 400px;
+    font-size: 1.5em;
+  }
+}
+
+/* 중간 화면 (태블릿) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .current-room-name {
+    width: 300px;
+    font-size: 1.3em;
+  }
+}
+
+/* 작은 화면 (모바일) */
+@media (max-width: 767px) {
+  .current-room-name {
+    width: 250px;
+    font-size: 1.1em;
+  }
 }
